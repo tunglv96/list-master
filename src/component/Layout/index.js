@@ -4,7 +4,6 @@ import Nav from "../Nav";
 import Banner from "../Banner";
 import Filter from "../Filter";
 import Table from "../Table";
-import Pagination from "../Pagination";
 import Footer from "../Footer";
 
 class Layout extends Component {
@@ -22,7 +21,6 @@ class Layout extends Component {
                 <Banner />
                 <Filter />
                 <Table />
-                <Pagination />
               </div>
             </article>
             <Footer />
