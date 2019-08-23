@@ -10,7 +10,6 @@ class Table extends Component {
       currentPage: 1,
       todosPerPage: 3
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -27,7 +26,7 @@ class Table extends Component {
       });
   }
 
-  handleClick(event) {
+  handleClick = (event) => {
     this.setState({
       currentPage: Number(event.target.id)
     });
@@ -36,7 +35,6 @@ class Table extends Component {
   render() {
     const { todos, currentPage, todosPerPage } = this.state;
 
-    // Logic for displaying current todos
     const indexOfLastTodo = currentPage * todosPerPage;
     const indexOfFirstTodo = indexOfLastTodo - todosPerPage;
     const currentTodos = todos.slice(indexOfFirstTodo, indexOfLastTodo);
@@ -57,7 +55,6 @@ class Table extends Component {
     </tr>;
     });
 
-    // Logic for displaying page numbers
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(todos.length / todosPerPage); i++) {
       pageNumbers.push(i);
