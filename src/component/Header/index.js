@@ -2,13 +2,27 @@
 import React, { Component } from "react";
 
 class index extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      elmTaskMenu: true
+    }
+  }
+  toggleMenu =   () => {
+    this.props.toggleMenu();
+    this.setState({
+      elmTaskMenu: !this.state.elmTaskMenu
+    });
+  }
   render() {
+    let {elmTaskMenu} = this.state;
     return (
       <div id="header">
         <div className="container">
           <div className="row">
             <div className="col-sm-1 col-1 bars">
-              <span className="fas fa-bars" />
+              <span className={elmTaskMenu ? "fas fa-times" : "fas fa-bars"} onClick={this.toggleMenu} />
             </div>
             <div className="col-sm-5 col-5 from">
               <form className="my-2 my-lg-0">

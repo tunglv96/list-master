@@ -237,12 +237,12 @@ a {
   }
   ul li {
     padding-left: 7px;
-    &:nth-child(11) {
-      display: none;
-    }
   }
 
   li {
+    &:focus{
+      outline: none;
+    }
     a {
       color: #3f3f3f;
       font-size: 18px;
@@ -266,10 +266,24 @@ a {
     }
   }
 
-  li.active {
+  .ant-pagination-item-active {
     a {
       background-color: #cccccc;
     }
+  }
+
+  .ant-pagination-item-ellipsis {
+    display: none;
+  }
+
+  .ant-pagination-total-text {
+    text-align: left!important;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .mt-5 {
+    margin-top: 0rem!important;
   }
 }
 
