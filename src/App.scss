@@ -409,6 +409,9 @@ nav.navbar {
       }
       .bars {
         padding-left: 34px !important;
+        span {
+          cursor: pointer;
+        }
       }
       .header-icon {
         margin-left: -111px !important;
